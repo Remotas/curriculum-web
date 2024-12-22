@@ -35,24 +35,24 @@ body {
 
     .left-column h2 {
         font-size: 16px;
-        color: fafbfd;
+        color: #fafbfd;
         margin-bottom: 10px;
         text-transform: uppercase;
         border-bottom: 1px solid #ffcc00;
         padding-bottom: 5px;
     }
 
-    .left-column p, .left-column ul {
+    .left-column p,
+    .left-column ul {
         font-size: 14px;
         line-height: 1.4;
         margin-bottom: 10px;
     }
 
-    /* Asegurar que las viñetas estén alineadas con el título */
     .left-column ul {
         list-style-type: disc;
-        padding-left: 20px; /* Ajustar el margen izquierdo para las viñetas */
-        margin-left: 0; /* Eliminar cualquier margen extra */
+        padding-left: 20px;
+        margin-left: 0;
     }
 
     .left-column li {
@@ -63,12 +63,12 @@ body {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     display: block;
     border: 8px solid #d3a20d;
 }
 
-/* Estilos para los iconos en la sección de contacto */
+/* Contact Section */
 .contact ul {
     list-style: none;
     padding-left: 0;
@@ -84,39 +84,41 @@ body {
     .contact li i {
         margin-right: 10px;
         font-size: 20px;
-        color: white; /* Color blanco por defecto para los iconos */
-        transition: color 0.3s ease; /* Animación suave al pasar el mouse */
+        color: white;
+        transition: color 0.3s ease;
     }
 
-        /* Colores específicos para cada icono */
+        .contact li i:hover {
+            color: #007BFF; /* Default hover color */
+        }
+
         .contact li i.fas.fa-envelope:hover {
-            color: #007BFF; /* Azul para el icono de correo */
+            color: #007BFF;
         }
 
         .contact li i.fas.fa-phone:hover {
-            color: #28a745; /* Verde para el icono de teléfono */
+            color: #28a745;
         }
 
         .contact li i.fab.fa-whatsapp:hover {
-            color: #25D366; /* Verde de WhatsApp */
+            color: #25D366;
         }
 
         .contact li i.fab.fa-linkedin:hover {
-            color: #0077B5; /* Azul para el icono de LinkedIn */
+            color: #0077B5;
         }
 
         .contact li i.fas.fa-map-marker-alt:hover {
-            color: #FF5733; /* Naranja para el icono de ubicación */
+            color: #FF5733;
         }
 
-/* Colores al pasar el mouse sobre los enlaces */
 .contact a {
-    color: inherit; /* Heredar el color del icono */
-    text-decoration: none; /* Sin subrayado */
+    color: inherit;
+    text-decoration: none;
 }
 
     .contact a:hover {
-        text-decoration: underline; /* Subrayado al pasar el ratón por encima del enlace */
+        text-decoration: underline;
     }
 
 /* Right Column */
@@ -142,7 +144,20 @@ header {
         margin-top: 10px;
     }
 
-/* Estilo general para las secciones */
+/* About Me Section */
+.about-me ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 0;
+}
+
+    .about-me ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+/* Section Styles */
 section {
     margin-bottom: 20px;
 }
@@ -156,93 +171,91 @@ section {
         text-transform: uppercase;
     }
 
-    section p, section ul {
+    section p,
+    section ul {
         text-align: justify;
         font-size: 14px;
         color: #333;
         margin-bottom: 10px;
     }
 
-/* Estilo para los iconos dentro de .section */
+/* Icon Styles */
 .section i {
-    margin-left: 5px; /* Espaciado entre la palabra y el icono */
-    font-size: 1.2em; /* Tamaño del icono, ajustable según el diseño */
-    color: #3498db; /* Color predeterminado del icono, ajustable al tema */
+    margin-left: 5px;
+    font-size: 1.2em;
+    color: #3498db;
 }
 
-/* Colores específicos para los iconos de herramientas */
 .fab.fa-wordpress {
-    color: #21759B; /* Color específico para WordPress */
+    color: #21759B;
 }
 
 .fab.fa-elementor {
-    color: #6C7DFF; /* Color específico para Elementor */
+    color: #6C7DFF;
 }
 
 .fab.fa-vuejs {
-    color: #41B883; /* Color específico para WPBakery (Vue.js) */
+    color: #41B883;
 }
 
 .fas.fa-store {
-    color: #0073e6; /* Color específico para WooCommerce */
+    color: #0073e6;
 }
 
 .fas.fa-chart-line {
-    color: #f39c12; /* Color específico para SEO */
+    color: #f39c12;
 }
 
 .fab.fa-php {
-    color: #8e44ad; /* Color específico para PHP */
+    color: #8e44ad;
 }
 
 .fab.fa-python {
-    color: #306998; /* Color específico para Python */
+    color: #306998;
 }
 
 .fab.fa-js {
-    color: #f7df1e; /* Color específico para JavaScript */
+    color: #f7df1e;
 }
 
 .fab.fa-html5 {
-    color: #e34f26; /* Color específico para HTML5 */
+    color: #e34f26;
 }
 
 .fab.fa-css3-alt {
-    color: #264de4; /* Color específico para CSS3 */
+    color: #264de4;
 }
 
 .fas.fa-tachometer-alt {
-    color: #2ecc71; /* Color específico para LiteSpeed Cache */
+    color: #2ecc71;
 }
 
 .fab.fa-cloudflare {
-    color: #f1c40f; /* Color específico para Cloudflare */
+    color: #f1c40f;
 }
 
-/* Estilo para el título del trabajo (h3) */
+/* Job Styles */
 .job h3 {
-    color: #292b2f; /* Color oscuro para el título */
-    font-size: 16px; /* Tamaño de fuente */
-    margin-bottom: 5px; /* Espacio debajo del título */
+    color: #292b2f;
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-/* Estilo para las fechas o descripciones de trabajos (p) */
 .job p {
-    font-size: 14px; /* Tamaño de fuente */
-    color: #666; /* Color gris para la descripción */
+    font-size: 14px;
+    color: #666;
 }
 
-/* Estilo para la lista de responsabilidades y logros */
 .job ul {
-    list-style-type: disc; /* Puntos de lista */
-    margin-left: 20px; /* Desplazamiento a la izquierda */
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
-    /* Estilo para cada ítem de la lista */
     .job ul li {
-        margin-bottom: 5px; /* Espacio entre ítems de la lista */
+        margin-bottom: 5px;
     }
 
+/* Language Switch */
 .language-switch {
     text-align: right;
     margin: 10px;
@@ -291,7 +304,7 @@ section {
         max-width: 1100px;
         margin: 20px auto;
         background: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
     }
 
     /* Estilo para la foto de perfil */
@@ -301,8 +314,8 @@ section {
     }
 
         .profile-photo img {
-            width: 180px;
-            height: 180px;
+            width: 135px;
+            height: 135px;
             border-radius: 50%;
             margin: 0 auto 15px auto;
             display: block;
@@ -321,7 +334,7 @@ section {
     }
 
         .left-column .section {
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
 
         .left-column h2 {
@@ -391,7 +404,7 @@ section {
     /* Columna Derecha */
     .right-column {
         width: 70%;
-        padding: 20px;
+        padding: 10px;
     }
 
     header {
@@ -409,6 +422,19 @@ section {
             font-size: 9px;
             color: #666;
             margin-top: 8px;
+        }
+
+    /* Estilo para las listas en la sección de "Sobre mí" */
+    .about-me ul {
+        list-style-type: disc;
+        padding-left: 15px;
+        margin-left: 0;
+    }
+
+        .about-me ul li {
+            margin-bottom: 5px;
+            font-size: 9px;
+            line-height: 1.3;
         }
 
     /* Estilo general para las secciones */
@@ -462,3 +488,4 @@ section {
             margin-bottom: 4px;
         }
 }
+
