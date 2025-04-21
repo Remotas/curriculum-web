@@ -1,0 +1,293 @@
+﻿/* ========== VARIABLES GLOBALES ========== */
+:root {
+    /* Colores principales */
+    --azul-oscuro: #2c3e50; /* Color de fondo del encabezado */
+    --azul: #3498db; /* Color azul para botones y enlaces */
+    --naranja: #f39c12; /* Color naranja para acentos */
+    --gris-oscuro: #333; /* Color de texto principal */
+    --gris: #7f8c8d; /* Color de texto secundario */
+    --gris-claro: #ecf0f1; /* Color de fondo de la columna izquierda */
+    /* Colores específicos para iconos de contacto */
+    --linkedin: #0077b5; /* Color oficial de LinkedIn */
+    --email: #d44638; /* Color rojo similar a Gmail */
+    --phone: #25d366; /* Color verde similar a WhatsApp */
+    --map: #ea4335; /* Color rojo similar a Google Maps */
+}
+
+/* ========== ESTILOS GENERALES ========== */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: var(--gris-oscuro); /* Color de texto principal */
+    background-color: #f5f5f5; /* Color de fondo de la página */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor principal del CV */
+.cv-container {
+    max-width: 900px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar horizontalmente */
+    background: white; /* Fondo blanco */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* ========== BARRA DE CONTROLES ========== */
+.controls {
+    text-align: right; /* Alinear controles a la derecha */
+    padding: 15px 20px; /* Espaciado interno */
+    background: var(--gris-claro); /* Fondo gris claro */
+}
+
+/* Estilos para botones de idioma y PDF */
+.lang-btn, .pdf-btn {
+    display: inline-block; /* Mostrar en línea */
+    padding: 8px 15px; /* Espaciado interno */
+    margin-left: 10px; /* Margen entre botones */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Grosor de fuente */
+    transition: all 0.3s; /* Transición suave para efectos hover */
+}
+
+.lang-btn {
+    background: transparent; /* Fondo transparente */
+    color: var(--azul-oscuro); /* Color de texto */
+    border: 1px solid var(--azul-oscuro); /* Borde */
+}
+
+.pdf-btn {
+    background: var(--azul-oscuro); /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+}
+
+/* Efectos hover para botones */
+.lang-btn:hover {
+    background: var(--azul-oscuro); /* Cambio de fondo al pasar el mouse */
+    color: white; /* Cambio de color de texto */
+}
+
+.pdf-btn:hover {
+    background: var(--azul); /* Cambio a azul más claro */
+}
+
+/* ========== ENCABEZADO CON FOTO ========== */
+.cv-header {
+    background: var(--azul-oscuro); /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    padding: 30px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Contenedor de la foto de perfil */
+.profile-pic {
+    width: 120px; /* Ancho fijo */
+    height: 120px; /* Altura fija */
+    border-radius: 50%; /* Forma circular */
+    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+    border: 4px solid var(--naranja); /* Borde naranja */
+    margin-right: 30px; /* Margen a la derecha */
+}
+
+    /* Estilos para la imagen de perfil */
+    .profile-pic img {
+        width: 100%; /* Ajustar al 100% del contenedor */
+        height: 100%; /* Ajustar al 100% del contenedor */
+        object-fit: cover; /* Ajustar imagen manteniendo proporciones */
+    }
+
+/* Texto del encabezado */
+.header-text {
+    flex: 1; /* Ocupar todo el espacio disponible */
+}
+
+/* Nombre principal */
+.cv-header h1 {
+    font-size: 36px; /* Tamaño grande */
+    margin: 0; /* Sin margen */
+    font-weight: 700; /* Negrita */
+}
+
+    /* Apellido (estilo diferente) */
+    .cv-header h1 span {
+        font-weight: 300; /* Más delgado */
+    }
+
+/* Título profesional */
+.cv-header .title {
+    color: var(--naranja); /* Color naranja */
+    font-size: 20px; /* Tamaño mediano */
+    margin: 5px 0 0; /* Margen superior */
+}
+
+/* ========== CONTENIDO PRINCIPAL ========== */
+.cv-content {
+    display: flex; /* Diseño en dos columnas */
+}
+
+/* Columna izquierda (información personal) */
+.left-col {
+    flex: 1; /* Ocupar 1 parte del espacio */
+    padding: 20px; /* Espaciado interno */
+    background: var(--gris-claro); /* Fondo gris claro */
+}
+
+/* Columna derecha (experiencia y formación) */
+.right-col {
+    flex: 2; /* Ocupar 2 partes del espacio */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* ========== ESTILOS DE SECCIONES ========== */
+/* Títulos de sección */
+h2 {
+    font-size: 18px; /* Tamaño mediano */
+    color: var(--azul-oscuro); /* Color azul oscuro */
+    border-bottom: 2px solid var(--azul); /* Línea inferior azul */
+    padding-bottom: 5px; /* Espaciado inferior */
+    margin: 25px 0 15px; /* Margen superior e inferior */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Subtítulos (ej: nombres de trabajos) */
+h3 {
+    font-size: 16px; /* Tamaño estándar */
+    margin: 20px 0 5px; /* Margen superior e inferior */
+    color: var(--gris-oscuro); /* Color de texto oscuro */
+}
+
+/* Párrafos y elementos de lista */
+p, li {
+    font-size: 14px; /* Tamaño pequeño */
+    margin-bottom: 8px; /* Margen inferior */
+}
+
+/* Empresa/Institución (estilo cursiva) */
+.company, .institute {
+    font-style: italic; /* Texto en cursiva */
+    color: var(--gris); /* Color gris */
+    margin-bottom: 10px; /* Margen inferior */
+    display: block; /* Mostrar como bloque */
+}
+
+/* Listas */
+ul {
+    padding-left: 20px; /* Sangría */
+}
+
+    /* Elementos de lista */
+    ul li {
+        margin-bottom: 8px; /* Margen inferior entre elementos */
+    }
+
+/* ========== SECCIÓN DE CONTACTO ========== */
+.contact-list {
+    list-style: none; /* Eliminar viñetas */
+    padding-left: 0; /* Eliminar sangría */
+}
+
+/* Enlaces de contacto */
+.contact-link {
+    color: var(--gris-oscuro); /* Color de texto oscuro */
+    text-decoration: none; /* Sin subrayado */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    padding: 5px 0; /* Espaciado interno */
+    transition: all 0.3s; /* Transición suave para efectos hover */
+}
+
+/* Iconos de contacto */
+.contact-icon {
+    margin-right: 10px; /* Margen a la derecha del icono */
+    width: 20px; /* Ancho fijo */
+    text-align: center; /* Centrar icono */
+    color: var(--azul); /* Color azul por defecto */
+    transition: all 0.3s; /* Transición suave */
+}
+
+/* Efecto hover para enlaces de contacto */
+.contact-link:hover {
+    color: var(--azul-oscuro); /* Cambio de color de texto */
+    transform: translateX(5px); /* Desplazamiento horizontal */
+}
+
+    /* Efecto hover para iconos */
+    .contact-link:hover .contact-icon {
+        transform: scale(1.2); /* Agrandar ligeramente */
+    }
+
+    /* Efectos hover específicos para cada tipo de icono */
+    .contact-link:hover .fa-phone {
+        color: var(--phone); /* Verde para teléfono */
+    }
+
+    .contact-link:hover .fa-envelope {
+        color: var(--email); /* Rojo para email */
+    }
+
+    .contact-link:hover .fa-linkedin {
+        color: var(--linkedin); /* Azul de LinkedIn */
+    }
+
+    .contact-link:hover .fa-map-marker-alt {
+        color: var(--map); /* Rojo para mapa */
+    }
+
+/* ========== DISEÑO RESPONSIVE ========== */
+@media (max-width: 768px) {
+    /* Cambiar a una sola columna en móviles */
+    .cv-content {
+        flex-direction: column; /* Apilar columnas verticalmente */
+    }
+
+    /* Ajustar encabezado para móviles */
+    .cv-header {
+        flex-direction: column; /* Apilar elementos verticalmente */
+        text-align: center; /* Centrar texto */
+        padding: 20px; /* Reducir espaciado */
+    }
+
+    /* Centrar foto de perfil en móviles */
+    .profile-pic {
+        margin: 0 auto 15px; /* Centrar y añadir margen inferior */
+    }
+
+    /* Centrar controles en móviles */
+    .controls {
+        text-align: center; /* Centrar botones */
+    }
+
+    /* Ajustar márgenes de botones en móviles */
+    .lang-btn, .pdf-btn {
+        margin: 5px; /* Margen uniforme */
+    }
+}
+
+/* ========== ESTILOS PARA IMPRESIÓN ========== */
+@media print {
+    /* Eliminar fondo y ajustar espaciado */
+    body {
+        background: none; /* Sin fondo */
+        padding: 0; /* Sin espaciado */
+    }
+
+    /* Ocultar controles al imprimir */
+    .controls {
+        display: none; /* No mostrar */
+    }
+
+    /* Eliminar sombra al imprimir */
+    .cv-container {
+        box-shadow: none; /* Sin sombra */
+    }
+
+    /* Mantener colores legibles al imprimir */
+    .contact-link {
+        color: var(--gris-oscuro) !important; /* Forzar color oscuro */
+    }
+
+    .contact-icon {
+        color: var(--azul) !important; /* Forzar color azul */
+    }
+}
