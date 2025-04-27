@@ -25,7 +25,7 @@ Este repositorio contiene el CV digital profesional de Melquiales Farias, desarr
 │   ├── js/
 │   │   └── main.js         # Funcionalidad interactiva (ES6)
 │   └── pdf/
-│       └── cv_melquiales_farias.pdf  # Versión descargable en PDF
+│       └── cv_melquiades_farias.pdf  # Versión descargable en PDF
 │
 └── images/
 │		└── profile.png         # Foto de perfil (optimizada para web)
