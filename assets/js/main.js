@@ -1,33 +1,38 @@
-﻿/**
+/**
  * Script principal del CV
  * Funcionalidades básicas de interacción
  */
 
+// Función para configurar el viewport en móviles - NUEVO
+function setViewportForMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        var viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+            viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+        }
+    }
+}
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function () {
-    // ========== SCROLL SUAVE PARA ENLACES INTERNOS ==========
-    // Seleccionar todos los enlaces que comienzan con #
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        // Añadir evento click a cada enlace
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Prevenir comportamiento por defecto
+    // Configurar viewport para móviles - NUEVO
+    setViewportForMobile();
 
-            // Hacer scroll suave hasta el elemento objetivo
+    // ========== SCROLL SUAVE PARA ENLACES INTERNOS ==========
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth' // Efecto de scroll suave
+                behavior: 'smooth'
             });
         });
     });
 
     // ========== MANEJO DE ENLACES EXTERNOS ==========
-    // Seleccionar todos los enlaces de la página
     document.querySelectorAll('a').forEach(link => {
-        // Verificar si el enlace es externo (no es mailto ni tel)
         if (link.hostname !== window.location.hostname &&
             !link.getAttribute('href').startsWith('mailto') &&
             !link.getAttribute('href').startsWith('tel')) {
-
-            // Añadir atributos para abrir en nueva pestaña de forma segura
             link.setAttribute('target', '_blank');
             link.setAttribute('rel', 'noopener noreferrer');
         }
