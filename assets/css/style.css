@@ -289,6 +289,99 @@ ul li {
     }
 }
 
+/* ========== FOOTER ========== */
+.cv-footer {
+    background: var(--azul-oscuro);
+    color: white;
+    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    border-top: 3px solid var(--naranja);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.footer-portfolio {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .footer-portfolio:hover {
+        color: var(--naranja);
+    }
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+/* CORRECCIÓN agregada para alinear el texto y el QR */
+.footer-qr-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto "Escanear → CV digital" y el QR */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+    .footer-qr-link:hover {
+        color: var(--naranja);
+    }
+
+.footer-qr {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--naranja);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+    .footer-qr:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+    }
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+}
+
+
     .contact-icon {
         color: var(--azul) !important; /* Forzar color azul */
     }
