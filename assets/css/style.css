@@ -162,6 +162,11 @@ p, li {
     margin-bottom: 8px;
 }
 
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .company, .institute {
     font-style: italic;
     color: var(--gris);
